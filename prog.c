@@ -12,7 +12,7 @@ int godina;
 pok next;
 
 }osob;
-
+//test test
     void dodaj(pok);
     void ispis(pok);
     pok stvori();
