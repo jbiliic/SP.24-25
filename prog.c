@@ -5,7 +5,7 @@
 
 typedef struct osoba * pok;
 typedef struct osoba{
-
+   
 char ime[MAX];
 char prezime[MAX];
 int godina;
@@ -24,7 +24,7 @@ pok next;
 
 int main(){
 
-int i=0, n=0;
+int i=0, n=0,j;
 osob head;
 head.next=NULL;
 
