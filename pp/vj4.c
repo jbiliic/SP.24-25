@@ -19,6 +19,7 @@ void sort(Pointer,Pointer);
 void insertAfter(Pointer,Pointer);
 void print(Pointer);
 Pointer addPolinom(Pointer,Pointer,Pointer);
+Pointer multipyPolinom(Pointer,Pointer,Pointer);
 
 
 int main(){
@@ -36,6 +37,9 @@ int main(){
 
     addPolinom(&head,&head2,&headAdd);
     print(headAdd.next);
+
+    multipyPolinom(&head,&head2,&headTimes);
+    print(headTimes.next);
 
 
 
@@ -101,6 +105,7 @@ void print(Pointer P){
         printf("(%d * X^%d )+",P->koef,P->exp);
         P=P->next;
     }
+    puts("\n");
 }
 
 void insertAfter(Pointer P, Pointer new){
@@ -110,7 +115,7 @@ void insertAfter(Pointer P, Pointer new){
 
 void readFromFile2(Pointer P){
     FILE *f;
-    f=fopen("FileZa4Zad2polinom.txt","r");
+    f=fopen("FileZa4Zad2polinom","r");
     Pointer newEl;
     int e=0,c=0;
 
@@ -129,26 +134,28 @@ void readFromFile2(Pointer P){
 }
 
 Pointer addPolinom(Pointer p1,Pointer p2, Pointer p){
-    p=p1;
-    Pointer temp=p;
-    int counter=1;
+    Pointer temp1=p1,temp2=p2;
+    while(temp1->next!=NULL){
+        Pointer newEl=create(temp1->next->koef,temp1->next->exp);
+        sort(p,newEl);
+        temp1=temp1->next;
+    }
 
-    while(p1->next!=NULL){
-        counter=1; 
+    while(temp2->next!=NULL){
+        Pointer newEl=create(temp2->next->koef,temp2->next->exp);
+        sort(p,newEl);
+        temp2=temp2->next;
+    }
+    return p;
+}
 
-        while(p->next!=NULL){
-            if(p1->next->exp==p->next->exp){
-                p->next->exp=p1->next->exp;
-                counter=0;
-            }
-            p=p->next;
+Pointer multipyPolinom(Pointer p1,Pointer p2,Pointer p){
+    Pointer temp1=p1,temp2=p2;
+    for(temp1=p1 ; temp1->next!=NULL ; temp1=temp1->next){
+        for(temp2=p2 ; temp2->next!=NULL ; temp2=temp2->next){
+            Pointer newEl=create(temp1->next->koef*temp2->next->koef,temp1->next->exp+temp2->next->exp);
+            sort(p,newEl);
         }
-
-        if(counter){
-            sort(temp,p1->next);
-        }
-
-        p1=p1->next;
     }
     return p;
 }
