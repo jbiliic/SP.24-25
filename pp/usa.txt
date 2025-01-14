@@ -1,0 +1,5 @@
+newYork 66
+losAngeles 22
+miami 33
+minesota 32
+

@@ -1,0 +1,6 @@
+kanada C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/kan.txt
+engleska C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/eng.txt
+amerika C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/usa.txt
+hrvatska C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/hrv.txt
+italija C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/ita.txt
+njemacka C:/Users/jopab/OneDrive/Dokumenti/SP.24-25/pp/ger.txt

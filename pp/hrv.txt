@@ -1,0 +1,5 @@
+split 21
+zagreb 678
+varazdin 43
+rijeka 100
+osijek 67

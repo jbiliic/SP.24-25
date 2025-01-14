@@ -1,0 +1,4 @@
+ vancuver 200
+ toronto 140
+ cincinaty 44
+ 

@@ -72,9 +72,6 @@ int main(){
     puts("\n");
 
     ispisPreorder(root.r);
-
-
-    
     
     return 0;
 }
